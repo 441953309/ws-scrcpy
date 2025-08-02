@@ -8,6 +8,13 @@ window.onload = async function (): Promise<void> {
     const parsedQuery = new URLSearchParams(hash);
     const action = parsedQuery.get('action');
 
+    console.log('hash:', hash);
+    parsedQuery.forEach((item) => {
+        console.log('parsedQuery:', item);
+    });
+
+    console.log('action:', action);
+
     /// #if USE_BROADWAY
     const { BroadwayPlayer } = await import('./player/BroadwayPlayer');
     StreamClientScrcpy.registerPlayer(BroadwayPlayer);
