@@ -132,6 +132,7 @@ body.stream {
     float: right;
     width: 3.715rem;
     background-color: var(--control-buttons-bg-color);
+    padding-top: 10px;
 }
 
 .control-button {
@@ -154,6 +155,11 @@ body.stream {
 
 .control-wrapper > label {
     display: inline-block;
+}
+
+.control-wrapper > label:first-of-type {
+    /* display: inline-block; */
+    display: none;
 }
 
 .control-button > svg {
